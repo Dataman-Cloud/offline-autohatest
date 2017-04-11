@@ -1,0 +1,4 @@
+dataman-monitor-grafana
+dataman-monitor-prometheus
+dataman-monitor-alertmanager
+dataman-monitor-consul-exporter

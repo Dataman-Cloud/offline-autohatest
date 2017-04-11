@@ -1,0 +1,7 @@
+dataman-zookeeper
+dataman-mesos-master
+dataman-marathon
+dataman-consul-master
+dataman-haproxy
+dataman-borgsphere
+dataman-swan-master
