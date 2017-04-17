@@ -81,7 +81,7 @@ master_2list_test(){
 		        $SRY_DIR/ansible/ansible.sh $master "docker start $service"
 		fi
 		echo "$master $service has been started"
-		sleep 10
+		sleep 5
 	done
     done
 }
@@ -113,7 +113,7 @@ monitor_2list_test(){
                 echo "$mhost $service has stopped"
 	        $SRY_DIR/ansible/ansible.sh $mhost "docker start $service"
 		echo "$mhost $service has been started"
-		sleep 10
+		sleep 5
     	done
     done
 }

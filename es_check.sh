@@ -1,7 +1,7 @@
 #!/bin/bash
 
 get_es_list(){
-	dig @192.168.1.231 elasticsearch.service.consul|grep 'elasticsearch.service.consul.[[:space:]]0[[:space:]]IN[[:space:]]A'
+	dig @127.0.0.1 elasticsearch.service.consul|grep 'elasticsearch.service.consul.[[:space:]]0[[:space:]]IN[[:space:]]A'
 }
 
 get_es_cluster_health(){
