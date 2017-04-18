@@ -10,6 +10,8 @@ SRY_ADMIN_USER="admin"
 # DM/OS default password
 SRY_ADMIN_PASSWD="Admin1234"
 
+# ha test debug
+DEBUG="false"
 # hatest user and password
 SRY_HATEST_USER="hatest"
 SRY_HATEST_PASSWD="hatest"
