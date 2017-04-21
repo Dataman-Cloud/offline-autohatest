@@ -3,4 +3,4 @@ set -e
 
 . ./config.cfg
 
-./run_pybot.sh pybot $variables --include ha valid_node_manage.txt
+./run_pybot.sh pybot $PYBOT_VARIABLES --include ha valid_node_manage.txt
