@@ -2,6 +2,12 @@
 
 ## 修改 config.cfg
 
+```
+cp config.cfg.temp config.cfg
+```
+
+查看并修改config.cfg
+
 ## 初始化高可用测试数据
 
 ```
