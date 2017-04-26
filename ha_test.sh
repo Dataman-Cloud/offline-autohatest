@@ -3,7 +3,6 @@ base_dir=$(cd `dirname $0` && pwd)
 cd $base_dir
 set -e
 . ./config.cfg
-. $SRY_DIR/config.cfg
 
 if [ "x$IS_SINGLE" == "xtrue" ];then
 	echo "Standalone does not require high availability tests. "
