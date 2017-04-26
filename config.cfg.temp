@@ -2,6 +2,7 @@
 set -e
 
 SRY_DIR="/data/offlinesry"
+. $SRY_DIR/config.cfg
 
 # DM/OS api address
 SRY_SERVER="http://192.168.1.254:81"  ## need to check
@@ -35,4 +36,5 @@ PYBOT_VARIABLES="
          --variable USERNAME:$SSH_USER \
          --variable PASSWORD:$SSH_PASSWD \
          --variable adminname:$SRY_ADMIN_USER \
-         --variable adminpasswd:$SRY_ADMIN_PASSWD"
+         --variable adminpasswd:$SRY_ADMIN_PASSWD" \
+         --variable CLUSTER_DC:$SRY_CONSUL_DC"
