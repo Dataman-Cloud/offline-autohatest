@@ -14,7 +14,7 @@ app_test(){
 }
 
 cluster_test(){
-	$SRY_DIR/check_count_tool.sh cluster_manage ./auto_test_cluster_manage.sh 30
+	$SRY_DIR/check_count_tool.sh cluster_manage ./auto_test_cluster_manage.sh 60
 }
 
 node_test(){
