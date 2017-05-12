@@ -22,6 +22,8 @@ SSH_USER="root"
 SSH_PASSWD="123"	## need to check
 # default slave ip
 DEAFAULT_SLAVE_IP="192.168.1.234" ## need to check
+# offline package mod [ marathon | swan ]
+OFFLINE_PACKAGE_MOD=$OFFLINE_PACKAGE_MOD
 
 IMAGE_LIST_FILE_PATH="$SRY_DIR/imagelist.txt"
 if [ ! -f "$IMAGE_LIST_FILE_PATH" ];then

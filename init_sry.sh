@@ -24,6 +24,14 @@ curl -X PATCH -H Authorization:$token $SRY_SERVER/v1/nodes -d "{
     \"vClusterId\": $vClusterId
 }"
 
+if [ "$OFFLINE_PACKAGE_MOD" == "swan" ];then
+        roleName="roleID"
+        role="5"
+else
+        roleName="role"
+        role="\"owner\""
+fi
+
 # create user hatest
 curl -X POST -H "Authorization: $token" $SRY_SERVER/v1/accounts -d '{
   "email": "system@dataman-inc.com",
@@ -34,7 +42,7 @@ curl -X POST -H "Authorization: $token" $SRY_SERVER/v1/accounts -d '{
   "accountGroups": [
       {
           "groupId": '$groupid',
-          "role": "owner"
+          "'$roleName'": '$role'
       }
     ]
 }'
