@@ -39,4 +39,6 @@ PYBOT_VARIABLES="
          --variable PASSWORD:$SSH_PASSWD \
          --variable adminname:$SRY_ADMIN_USER \
          --variable adminpasswd:$SRY_ADMIN_PASSWD \
+         --variable app_test_user_name:$SRY_HATEST_USER \
+         --variable app_test_user_passwd:$SRY_HATEST_PASSWD \
          --variable CLUSTER_DC:$SRY_CONSUL_DC"
