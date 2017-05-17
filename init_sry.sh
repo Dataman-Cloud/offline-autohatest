@@ -26,7 +26,7 @@ curl -X PATCH -H Authorization:$token $SRY_SERVER/v1/nodes -d "{
 
 if [ "$OFFLINE_PACKAGE_MOD" == "swan" ];then
         roleName="roleID"
-        role="5"
+        role=`./get_roleid_by_name.sh`
 else
         roleName="role"
         role="\"owner\""
