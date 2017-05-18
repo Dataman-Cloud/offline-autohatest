@@ -6,12 +6,17 @@
 
 BASE_URL=$SRY_SERVER
 
+if [ ! -z "$1" ] && [ ! -z "$2" ];then
+	SRY_ADMIN_USER=$1
+	SRY_ADMIN_PASSWD=$2
+fi
+
 get_token(){
     token=`curl -s -X POST $BASE_URL/v1/login -d '{"userName":"'$SRY_ADMIN_USER'", "password":"'$SRY_ADMIN_PASSWD'"}' | awk -F \" '{print $6}'`
-    echo "$token" > /tmp/sry_token
+    echo "$token" > /tmp/sry_token_${SRY_ADMIN_USER}
 }
 
-token=`cat /tmp/sry_token 2>/dev/null || echo`
+token=`cat /tmp/sry_token_${SRY_ADMIN_USER} 2>/dev/null || echo`
 if [ -z "$token" ];then
     echo "111111"
     get_token
