@@ -34,6 +34,13 @@ pre_check(){
 	echo "Test before check done."
 }
 
+init_sry(){
+	date
+	# init sry user 
+	echo "init sry user"
+	./init_sry.sh
+}
+
 master_3list_test(){
     date
     if [ "$OFFLINE_PACKAGE_MOD" == "marathon" ];then
@@ -134,6 +141,9 @@ elk_4list_test(){
 }
 
 pre_check
+set +e
+init_sry
+set -e
 master_3list_test
 master_2list_test
 master_docker_test
