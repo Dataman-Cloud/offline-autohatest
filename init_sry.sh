@@ -108,7 +108,7 @@ create_cluster $cluster_admin_token
 # 创建hatest组管理员
 create_group_admin_user $roleName $role $cluster_admin_token
 
-sleep 5
+sleep 4
 # 添加租户主机到集群, 因为在添加主机到集群前需要等待主机分配到租户，所以在这循环重试
 for i in `seq 1 10`
 do
