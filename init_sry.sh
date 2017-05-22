@@ -5,7 +5,7 @@ cd $base_dir
 . ./config.cfg
 set +e
 
-# 租房id
+# 租户id
 tenantid=""
 # 用户组id
 groupid=""
