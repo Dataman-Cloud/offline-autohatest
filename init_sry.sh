@@ -39,17 +39,21 @@ create_group_admin_user(){
 
     # create user hatest
     curl -X POST -H "Authorization: $tmp_token" $SRY_SERVER/v1/accounts -d '{
-      "email": "'$SRY_HATEST_USER'@dataman-inc.com",
-      "title": "",
-      "userName": "'$SRY_HATEST_USER'",
-      "password": "'$SRY_HATEST_PASSWD'",
-      "name": "'$SRY_HATEST_USER'",
-      "accountGroups": [
-          {
-              "groupId": '$groupid',
-              "'$roleName'": '$role'
-          }
-      ]
+	    "Password": "'$SRY_HATEST_PASSWD'",
+	    "accountGroups": [
+	          {
+        	      "groupId": '$groupid',
+	              "'$roleName'": '$role'
+        	  }
+	    ],
+	    "email": "'$SRY_HATEST_USER'@dataman-inc.com",
+	    "name": "'$SRY_HATEST_USER'",
+	    "tenantId": {
+	        "Int64": '$tenantid',
+        	"Valid": true
+	    },
+    	"userName": "'$SRY_HATEST_USER'"
+
     }'
 
 }
