@@ -21,7 +21,7 @@ SRY_ADMIN_PASSWD="Admin1234"
 # ha test debug
 DEBUG="false"
 # tenant user and password
-SRY_TENANT_USER="system"
+SRY_TENANT_USER="dataman"
 SRY_TENANT_PASSWD="Admin1234"
 # hatest user and password
 SRY_HATEST_USER="hatest"
