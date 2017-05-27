@@ -7,7 +7,12 @@ SRY_DIR="/data/offlinesry"
 # is single
 IS_SINGLE=$IS_SINGLE
 # DM/OS api address
-SRY_SERVER="http://192.168.1.254:81"  ## need to check
+if [ "$IS_SINGLE" == "false" ];then
+	SRY_SERVER="http://$KEEPALIVED_VI:$BORG_HAPROXY_PORT"
+else
+	SRY_SERVER="http://$LOCAL_IP:$BORG_HAPROXY_PORT"
+fi
+
 # DM/OS default user
 SRY_ADMIN_USER="admin"
 # DM/OS default password
@@ -28,7 +33,7 @@ SSH_USER="root"
 # ssh passwd
 SSH_PASSWD="123"	## need to check
 # default slave ip
-DEAFAULT_SLAVE_IP="192.168.1.234" ## need to check
+DEAFAULT_SLAVE_IP=`awk '/^sryslave1[[:space:]].*ansible_ssh_host/{print $3}' /data/offlinesry/ansible/inventory/hosts|awk -F= '{print $2}'`
 # offline package mod [ marathon | swan ]
 OFFLINE_PACKAGE_MOD=$OFFLINE_PACKAGE_MOD
 
