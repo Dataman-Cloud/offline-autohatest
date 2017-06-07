@@ -81,11 +81,7 @@ master_2list_test(){
 		fi
 		echo "$master $service has stopped"
 		node_test
-		if [ "x$service" == "xdataman-keepalived" ];then
-			$SRY_DIR/ansible/ansible.sh $master "/data/scripts/run_keepalived.sh"
-		else
-		        $SRY_DIR/ansible/ansible.sh $master "docker start $service"
-		fi
+		$SRY_DIR/ansible/ansible.sh $master "docker start $service"
 		echo "$master $service has been started"
 		sleep 5
 	done
