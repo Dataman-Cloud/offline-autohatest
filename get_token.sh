@@ -18,7 +18,6 @@ get_token(){
 
 token=`cat /tmp/sry_token_${SRY_ADMIN_USER} 2>/dev/null || echo`
 if [ -z "$token" ];then
-    echo "111111"
     get_token
 fi
 
