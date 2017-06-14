@@ -1,2 +1,1 @@
-dataman-keepalived
 dataman-mysql
