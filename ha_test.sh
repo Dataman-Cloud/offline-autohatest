@@ -76,9 +76,6 @@ master_2list_test(){
     for service in $service_2list;do
 	for master in srymaster1 srymaster2 ; do
 		$SRY_DIR/ansible/ansible.sh $master "docker stop $service"
-		if [ "x$service" == "xdataman-keepalived" ];then
-			$SRY_DIR/ansible/ansible.sh $master "service network restart"
-		fi
 		echo "$master $service has stopped"
 		node_test
 		$SRY_DIR/ansible/ansible.sh $master "docker start $service"

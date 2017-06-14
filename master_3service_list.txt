@@ -3,5 +3,6 @@ dataman-mesos-master
 dataman-marathon
 dataman-consul-master
 dataman-haproxy
+dataman-keepalived
 dataman-borgsphere
 dataman-swan-master
